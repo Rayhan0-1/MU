@@ -1,0 +1,39 @@
+
+mulTable.o:     file format pe-i386
+
+
+Disassembly of section .text:
+
+00000000 <_main>:
+   0:	55                   	push   ebp
+   1:	89 e5                	mov    ebp,esp
+   3:	83 e4 f0             	and    esp,0xfffffff0
+   6:	83 ec 20             	sub    esp,0x20
+   9:	e8 00 00 00 00       	call   e <_main+0xe>
+   e:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  15:	e8 00 00 00 00       	call   1a <_main+0x1a>
+  1a:	8d 44 24 18          	lea    eax,[esp+0x18]
+  1e:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  22:	c7 04 24 11 00 00 00 	mov    DWORD PTR [esp],0x11
+  29:	e8 00 00 00 00       	call   2e <_main+0x2e>
+  2e:	c7 44 24 1c 01 00 00 	mov    DWORD PTR [esp+0x1c],0x1
+  35:	00 
+  36:	eb 30                	jmp    68 <_main+0x68>
+  38:	8b 44 24 18          	mov    eax,DWORD PTR [esp+0x18]
+  3c:	0f af 44 24 1c       	imul   eax,DWORD PTR [esp+0x1c]
+  41:	89 c2                	mov    edx,eax
+  43:	8b 44 24 18          	mov    eax,DWORD PTR [esp+0x18]
+  47:	89 54 24 0c          	mov    DWORD PTR [esp+0xc],edx
+  4b:	8b 54 24 1c          	mov    edx,DWORD PTR [esp+0x1c]
+  4f:	89 54 24 08          	mov    DWORD PTR [esp+0x8],edx
+  53:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  57:	c7 04 24 14 00 00 00 	mov    DWORD PTR [esp],0x14
+  5e:	e8 00 00 00 00       	call   63 <_main+0x63>
+  63:	83 44 24 1c 01       	add    DWORD PTR [esp+0x1c],0x1
+  68:	83 7c 24 1c 0a       	cmp    DWORD PTR [esp+0x1c],0xa
+  6d:	7e c9                	jle    38 <_main+0x38>
+  6f:	b8 00 00 00 00       	mov    eax,0x0
+  74:	c9                   	leave  
+  75:	c3                   	ret    
+  76:	90                   	nop
+  77:	90                   	nop

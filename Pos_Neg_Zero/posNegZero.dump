@@ -1,0 +1,38 @@
+
+posNegZero.o:     file format pe-i386
+
+
+Disassembly of section .text:
+
+00000000 <_main>:
+   0:	55                   	push   ebp
+   1:	89 e5                	mov    ebp,esp
+   3:	83 e4 f0             	and    esp,0xfffffff0
+   6:	83 ec 20             	sub    esp,0x20
+   9:	e8 00 00 00 00       	call   e <_main+0xe>
+   e:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  15:	e8 00 00 00 00       	call   1a <_main+0x1a>
+  1a:	8d 44 24 1c          	lea    eax,[esp+0x1c]
+  1e:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  22:	c7 04 24 11 00 00 00 	mov    DWORD PTR [esp],0x11
+  29:	e8 00 00 00 00       	call   2e <_main+0x2e>
+  2e:	8b 44 24 1c          	mov    eax,DWORD PTR [esp+0x1c]
+  32:	85 c0                	test   eax,eax
+  34:	7e 0e                	jle    44 <_main+0x44>
+  36:	c7 04 24 14 00 00 00 	mov    DWORD PTR [esp],0x14
+  3d:	e8 00 00 00 00       	call   42 <_main+0x42>
+  42:	eb 22                	jmp    66 <_main+0x66>
+  44:	8b 44 24 1c          	mov    eax,DWORD PTR [esp+0x1c]
+  48:	85 c0                	test   eax,eax
+  4a:	79 0e                	jns    5a <_main+0x5a>
+  4c:	c7 04 24 1d 00 00 00 	mov    DWORD PTR [esp],0x1d
+  53:	e8 00 00 00 00       	call   58 <_main+0x58>
+  58:	eb 0c                	jmp    66 <_main+0x66>
+  5a:	c7 04 24 26 00 00 00 	mov    DWORD PTR [esp],0x26
+  61:	e8 00 00 00 00       	call   66 <_main+0x66>
+  66:	b8 00 00 00 00       	mov    eax,0x0
+  6b:	c9                   	leave  
+  6c:	c3                   	ret    
+  6d:	90                   	nop
+  6e:	90                   	nop
+  6f:	90                   	nop
